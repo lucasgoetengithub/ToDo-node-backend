@@ -8,6 +8,8 @@ const MacadressValidation = require('../middlewares/MacadressValidation');
 
 router.post('/', TaskValidation, TaskController.create);
 router.put('/:id', TaskController.update);
+router.get('/:id', TaskController.show);
 router.get('/filter/all', MacadressValidation, TaskController.all);
+
 
 module.exports = router;
